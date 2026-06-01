@@ -1,3 +1,4 @@
 node_modules/
 .DS_Store
 trials/*/vue-preview/dist/
+trials/*/skillopt/
