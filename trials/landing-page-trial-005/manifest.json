@@ -1,0 +1,48 @@
+{
+  "run_id": "landing-page-trial-005",
+  "template_id": "landing-page-builder",
+  "purpose": "Visual promotion review for landing-page-builder@v5.",
+  "preview_base_url": "https://jerryfane.github.io/gitmoot-previews/runs/landing-page-trial-005/",
+  "items": [
+    {
+      "id": "item-011",
+      "title": "Local automation tool page",
+      "split": "promotion-review",
+      "prompt": "trials/landing-page-trial-005/prompts/item-011.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "source": "previous winning preview",
+          "preview_path": "runs/landing-page-trial-005/item-011/a/",
+          "artifact": "trials/landing-page-trial-005/artifacts/item-011-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "source": "landing-page-builder@v5 refined preview",
+          "preview_path": "runs/landing-page-trial-005/item-011/b/",
+          "artifact": "trials/landing-page-trial-005/artifacts/item-011-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-012",
+      "title": "Developer onboarding docs page",
+      "split": "promotion-review",
+      "prompt": "trials/landing-page-trial-005/prompts/item-012.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "source": "previous winning preview",
+          "preview_path": "runs/landing-page-trial-005/item-012/a/",
+          "artifact": "trials/landing-page-trial-005/artifacts/item-012-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "source": "landing-page-builder@v5 refined preview",
+          "preview_path": "runs/landing-page-trial-005/item-012/b/",
+          "artifact": "trials/landing-page-trial-005/artifacts/item-012-b.md"
+        }
+      }
+    }
+  ]
+}
