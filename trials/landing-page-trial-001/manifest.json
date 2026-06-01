@@ -1,0 +1,67 @@
+{
+  "run_id": "landing-page-trial-001",
+  "template_id": "landing-page-builder",
+  "preview_base_url": "https://jerryfane.github.io/gitmoot-previews/runs/landing-page-trial-001/",
+  "items": [
+    {
+      "id": "item-001",
+      "title": "Gitmoot developer landing page",
+      "split": "train",
+      "prompt": "trials/landing-page-trial-001/prompts/item-001.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-001/item-001/a/",
+          "artifact": "trials/landing-page-trial-001/artifacts/item-001-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-001/item-001/b/",
+          "artifact": "trials/landing-page-trial-001/artifacts/item-001-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-002",
+      "title": "Gitmoot SkillOpt explainer page",
+      "split": "validation",
+      "prompt": "trials/landing-page-trial-001/prompts/item-002.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-001/item-002/a/",
+          "artifact": "trials/landing-page-trial-001/artifacts/item-002-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-001/item-002/b/",
+          "artifact": "trials/landing-page-trial-001/artifacts/item-002-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-003",
+      "title": "Gitmoot install/get-started page",
+      "split": "test",
+      "prompt": "trials/landing-page-trial-001/prompts/item-003.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-001/item-003/a/",
+          "artifact": "trials/landing-page-trial-001/artifacts/item-003-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-001/item-003/b/",
+          "artifact": "trials/landing-page-trial-001/artifacts/item-003-b.md"
+        }
+      }
+    }
+  ]
+}
