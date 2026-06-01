@@ -1,0 +1,36 @@
+{
+  "baseline_selection_hard": 1.0,
+  "best_selection_hard": 0.8866666666666667,
+  "best_step": 1,
+  "dry_run": false,
+  "token_summary": {
+    "_total": {
+      "calls": 47,
+      "completion_tokens": 30160,
+      "prompt_tokens": 88504,
+      "total_tokens": 118664
+    },
+    "analyst": {
+      "calls": 3,
+      "completion_tokens": 2384,
+      "prompt_tokens": 21227,
+      "total_tokens": 23611
+    },
+    "gitmoot_judge": {
+      "calls": 22,
+      "completion_tokens": 8006,
+      "prompt_tokens": 29200,
+      "total_tokens": 37206
+    },
+    "gitmoot_rollout": {
+      "calls": 22,
+      "completion_tokens": 19770,
+      "prompt_tokens": 38077,
+      "total_tokens": 57847
+    }
+  },
+  "total_accepts": 1,
+  "total_rejects": 1,
+  "total_skips": 1,
+  "total_steps": 3
+}

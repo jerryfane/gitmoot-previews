@@ -1,0 +1,12 @@
+{
+  "diff_artifact_id": "candidate-diff",
+  "metadata": {
+    "artifact_ids": [
+      "candidate-diff",
+      "eval-report",
+      "preference-summary"
+    ]
+  },
+  "preference_summary": "# Gitmoot SkillOpt Candidate\n\nMode: optimizer\n\nBest selection hard: 0.8866666666666667\nBaseline selection hard: 1.0\nTotal steps: 3",
+  "score": 0.8866666666666667
+}
