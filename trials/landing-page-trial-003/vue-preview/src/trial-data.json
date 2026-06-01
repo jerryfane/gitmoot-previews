@@ -1,0 +1,366 @@
+{
+  "runId": "landing-page-trial-003",
+  "templateId": "landing-page-builder",
+  "options": {
+    "a": {
+      "label": "Option A",
+      "variant": "narrative",
+      "notes": "Narrative/product-first direction with broader positioning, editorial sections, and a more branded first impression."
+    },
+    "b": {
+      "label": "Option B",
+      "variant": "workflow",
+      "notes": "Workflow/operator-first direction with concrete steps, commands, proof points, and more task-oriented CTAs."
+    }
+  },
+  "items": [
+    {
+      "id": "item-001",
+      "title": "Developer CLI launch page",
+      "split": "train",
+      "product": "ForgeCLI",
+      "prompt": "Create a landing page for ForgeCLI, a release cockpit for developer CLI projects. Compare a brand/product launch page against an install-first developer workflow page.",
+      "a": {
+        "eyebrow": "Command-line releases with a calmer rhythm",
+        "headline": "Give every CLI release a launch surface.",
+        "summary": "ForgeCLI turns binary publishing, changelog writing, and install docs into a single release moment.",
+        "primary": "Explore ForgeCLI",
+        "secondary": "See release story",
+        "proof": "A product-first page for maintainers who want their tools to feel reliable before users run the first command.",
+        "steps": ["Release narrative", "Version story", "Trust signals", "Final launch CTA"],
+        "details": ["Brand-led hero", "Maintainer credibility", "Release confidence"],
+        "command": "forge release preview"
+      },
+      "b": {
+        "eyebrow": "Install-first release automation",
+        "headline": "Build, sign, publish, and document a CLI release from one command.",
+        "summary": "ForgeCLI gives maintainers a repeatable checklist for cross-platform binaries and GitHub releases.",
+        "primary": "Copy release command",
+        "secondary": "Read install docs",
+        "proof": "A developer-first page that shows the workflow before asking for trust.",
+        "steps": ["Connect repo", "Build binaries", "Sign artifacts", "Publish release"],
+        "details": ["Copyable command block", "Release checklist", "Platform output matrix"],
+        "command": "forge release start --repo owner/tool"
+      }
+    },
+    {
+      "id": "item-002",
+      "title": "Open source docs homepage",
+      "split": "train",
+      "product": "DocsRail",
+      "prompt": "Create a landing page for DocsRail, an open source documentation homepage generator. Compare a documentation homepage against a contributor onboarding page.",
+      "a": {
+        "eyebrow": "Docs that orient readers quickly",
+        "headline": "Turn a repo into a documentation homepage people can scan.",
+        "summary": "DocsRail maps concepts, commands, examples, and release notes into a clear static docs entrypoint.",
+        "primary": "Generate docs",
+        "secondary": "Browse examples",
+        "proof": "Best when the main job is helping users understand what the project does and where to start.",
+        "steps": ["Scan repo", "Map concepts", "Create guides", "Publish docs"],
+        "details": ["Concept map", "Guide hierarchy", "Example-first pages"],
+        "command": "docsrail build --source . --out docs"
+      },
+      "b": {
+        "eyebrow": "From clone to contribution",
+        "headline": "Give contributors the shortest path to a useful first PR.",
+        "summary": "DocsRail can frame setup, architecture, starter issues, and review rules as one onboarding flow.",
+        "primary": "Create contributor guide",
+        "secondary": "Open starter issue",
+        "proof": "Best when the docs need to activate contributors instead of only explaining the project.",
+        "steps": ["Clone", "Run checks", "Understand modules", "Pick first task"],
+        "details": ["Setup path", "Architecture sketch", "Contribution checklist"],
+        "command": "docsrail onboard --repo ."
+      }
+    },
+    {
+      "id": "item-003",
+      "title": "AI notebook workspace",
+      "split": "train",
+      "product": "LabSlate",
+      "prompt": "Create a landing page for LabSlate, an AI notebook workspace. Compare a visual research story against a practical experiment tracking workflow.",
+      "a": {
+        "eyebrow": "A visible trail for AI research",
+        "headline": "Keep experiments, prompts, and decisions in one readable slate.",
+        "summary": "LabSlate gives research work a visual memory so teams can revisit how conclusions emerged.",
+        "primary": "Open a slate",
+        "secondary": "View research story",
+        "proof": "A narrative page for researchers who want confidence that the workspace will preserve context.",
+        "steps": ["Prompt moment", "Run artifact", "Decision note", "Research memory"],
+        "details": ["Timeline-first layout", "Artifact story", "Decision context"],
+        "command": "labslate open ./experiments"
+      },
+      "b": {
+        "eyebrow": "Experiment tracking without ceremony",
+        "headline": "Compare prompts, runs, artifacts, and outcomes without rebuilding context.",
+        "summary": "LabSlate organizes each experiment as a compact workflow: input, output, evidence, next action.",
+        "primary": "Import run",
+        "secondary": "Compare artifacts",
+        "proof": "A practical page for teams that need repeatable experiment review more than a research mood.",
+        "steps": ["Capture prompt", "Attach artifact", "Score output", "Resume next run"],
+        "details": ["Run compare table", "Artifact ledger", "Resume checkpoints"],
+        "command": "labslate import runs/latest.json"
+      }
+    },
+    {
+      "id": "item-004",
+      "title": "Plugin marketplace page",
+      "split": "train",
+      "product": "PluginDock",
+      "prompt": "Create a landing page for PluginDock, a marketplace for runtime plugins. Compare discovery/browsing against trust-and-permissions-first install.",
+      "a": {
+        "eyebrow": "A marketplace for agent extensions",
+        "headline": "Browse the plugins that make local agents more capable.",
+        "summary": "PluginDock presents skills, MCP servers, and runtime commands as a searchable catalog.",
+        "primary": "Browse plugins",
+        "secondary": "Submit plugin",
+        "proof": "Best when the user needs breadth, categories, and fast discovery.",
+        "steps": ["Search", "Filter", "Preview", "Install"],
+        "details": ["Category browsing", "Capability tags", "Featured plugins"],
+        "command": "plugindock search review"
+      },
+      "b": {
+        "eyebrow": "Install only what you trust",
+        "headline": "See permissions, runtime access, and maintenance status before install.",
+        "summary": "PluginDock makes each plugin explain what it can do, what it can touch, and how it updates.",
+        "primary": "Review permissions",
+        "secondary": "Install locally",
+        "proof": "Best when trust, safety, and runtime compatibility matter more than browsing volume.",
+        "steps": ["Read permissions", "Check runtime", "Pin version", "Verify install"],
+        "details": ["Permission-first listings", "Version provenance", "Runtime doctor checks"],
+        "command": "plugindock install owner/plugin --pin"
+      }
+    },
+    {
+      "id": "item-005",
+      "title": "SaaS analytics product page",
+      "split": "train",
+      "product": "Northstar Metrics",
+      "prompt": "Create a landing page for Northstar Metrics. Compare an executive marketing page against an operator dashboard-oriented page.",
+      "a": {
+        "eyebrow": "Product analytics for sharper roadmaps",
+        "headline": "Know which product bets deserve the next sprint.",
+        "summary": "Northstar Metrics turns user behavior into a calm story leaders can use for prioritization.",
+        "primary": "Book a demo",
+        "secondary": "Read customer story",
+        "proof": "A marketing-led page for buyers who need confidence, clarity, and a strategic promise.",
+        "steps": ["Align goals", "Measure behavior", "Spot movement", "Choose roadmap"],
+        "details": ["Executive narrative", "Strategic proof", "Decision outcomes"],
+        "command": "northstar demo"
+      },
+      "b": {
+        "eyebrow": "Analytics that survive Monday planning",
+        "headline": "Scan goals, cohorts, and decisions in one operating view.",
+        "summary": "Northstar Metrics reduces product analytics to the few numbers that change team action.",
+        "primary": "Open dashboard",
+        "secondary": "Connect events",
+        "proof": "An operator-led page for teams that need working surfaces, not another promise.",
+        "steps": ["Connect events", "Choose goal", "Track cohorts", "Log decision"],
+        "details": ["Goal dashboard", "Cohort movement", "Decision log"],
+        "command": "northstar sync --workspace product"
+      }
+    },
+    {
+      "id": "item-006",
+      "title": "API observability launch page",
+      "split": "train",
+      "product": "TraceHarbor",
+      "prompt": "Create a landing page for TraceHarbor. Compare a problem/incident story against a contract-debugging workflow page.",
+      "a": {
+        "eyebrow": "When APIs break, teams need a shared story",
+        "headline": "Turn failing requests into incidents developers understand.",
+        "summary": "TraceHarbor connects endpoint failures, customer impact, and deploy context into one narrative.",
+        "primary": "Investigate incident",
+        "secondary": "See failure story",
+        "proof": "Best when the page needs to communicate urgency and cross-team alignment.",
+        "steps": ["Failure spike", "Customer impact", "Deploy context", "Owner handoff"],
+        "details": ["Incident narrative", "Impact language", "Team alignment"],
+        "command": "traceharbor incident latest"
+      },
+      "b": {
+        "eyebrow": "Contract failures grouped by fix path",
+        "headline": "Find the endpoint, schema, and deploy that caused the break.",
+        "summary": "TraceHarbor gives API teams a debugging workflow organized around contract ownership.",
+        "primary": "Inspect traces",
+        "secondary": "Open contract diff",
+        "proof": "Best when the reviewer wants a concrete developer workflow and clear next actions.",
+        "steps": ["Capture requests", "Group failures", "Diff schema", "Assign owner"],
+        "details": ["Contract-aware clustering", "Deploy regression view", "Endpoint ownership"],
+        "command": "traceharbor watch --service api"
+      }
+    },
+    {
+      "id": "item-007",
+      "title": "Team knowledge base page",
+      "split": "train",
+      "product": "FieldNotes",
+      "prompt": "Create a landing page for FieldNotes. Compare a knowledge-memory story against a decision-record workflow.",
+      "a": {
+        "eyebrow": "Team memory without stale folders",
+        "headline": "Keep the context behind work easy to find.",
+        "summary": "FieldNotes gives teams a shared memory for projects, decisions, and source links.",
+        "primary": "Search memory",
+        "secondary": "Read story",
+        "proof": "Best when the page needs to make knowledge feel durable and human.",
+        "steps": ["Capture context", "Link source", "Preserve memory", "Find later"],
+        "details": ["Searchable memory", "Project context", "Source trail"],
+        "command": "fieldnotes search \"launch\""
+      },
+      "b": {
+        "eyebrow": "Decision records with owners and expiry",
+        "headline": "Write down what changed, who owns it, and when to revisit it.",
+        "summary": "FieldNotes turns fuzzy team context into explicit decision records with accountable metadata.",
+        "primary": "Create decision",
+        "secondary": "Review owners",
+        "proof": "Best when the page should teach a repeatable team operating workflow.",
+        "steps": ["Record decision", "Assign owner", "Set review date", "Attach evidence"],
+        "details": ["Decision-first records", "Owner metadata", "Review cadence"],
+        "command": "fieldnotes decision add"
+      }
+    },
+    {
+      "id": "item-008",
+      "title": "Design review tool page",
+      "split": "train",
+      "product": "FrameCheck",
+      "prompt": "Create a landing page for FrameCheck. Compare a visual-quality brand page against a PR workflow tool page.",
+      "a": {
+        "eyebrow": "Visual quality before release",
+        "headline": "Protect the interface your users actually see.",
+        "summary": "FrameCheck turns responsive screenshots into a clear design review moment.",
+        "primary": "See visual review",
+        "secondary": "Browse gallery",
+        "proof": "Best when the page should feel visual, polished, and brand-led.",
+        "steps": ["Capture", "Compare", "Annotate", "Approve"],
+        "details": ["Visual gallery", "Responsive states", "Approval story"],
+        "command": "framecheck gallery"
+      },
+      "b": {
+        "eyebrow": "Design review inside pull requests",
+        "headline": "Capture screenshots, compare breakpoints, and approve UI changes in PRs.",
+        "summary": "FrameCheck makes visual regressions reviewable with concrete artifacts and comments.",
+        "primary": "Run PR review",
+        "secondary": "Open diff matrix",
+        "proof": "Best when the page needs to sell a workflow developers can add to CI.",
+        "steps": ["Open PR", "Capture matrix", "Comment diffs", "Approve fix"],
+        "details": ["PR-linked screenshots", "Breakpoint matrix", "Review history"],
+        "command": "framecheck capture --pr 42"
+      }
+    },
+    {
+      "id": "item-009",
+      "title": "Security changelog page",
+      "split": "val",
+      "product": "PatchLedger",
+      "prompt": "Create a landing page for PatchLedger. Compare a trust/compliance page against an advisory drafting workflow.",
+      "a": {
+        "eyebrow": "Security updates without confusion",
+        "headline": "Publish patch notes users can trust.",
+        "summary": "PatchLedger helps teams communicate security changes with clarity and restraint.",
+        "primary": "Read disclosure policy",
+        "secondary": "View trust page",
+        "proof": "Best when the page should establish trust before describing the operational workflow.",
+        "steps": ["Classify", "Review", "Disclose", "Guide users"],
+        "details": ["Trust posture", "Disclosure language", "Customer confidence"],
+        "command": "patchledger policy"
+      },
+      "b": {
+        "eyebrow": "Draft advisories with controlled disclosure",
+        "headline": "Explain affected versions, fixes, and user actions without leaking details.",
+        "summary": "PatchLedger guides security teams through advisory drafts and release coordination.",
+        "primary": "Draft advisory",
+        "secondary": "Build impact matrix",
+        "proof": "Best when the user needs a practical workflow for sensitive communication.",
+        "steps": ["Classify issue", "Map versions", "Draft advisory", "Publish patch"],
+        "details": ["Disclosure-safe templates", "Version impact matrix", "Actionable guidance"],
+        "command": "patchledger draft CVE-YYYY-XXXX"
+      }
+    },
+    {
+      "id": "item-010",
+      "title": "Customer onboarding page",
+      "split": "val",
+      "product": "OnboardPath",
+      "prompt": "Create a landing page for OnboardPath. Compare a customer-success promise page against a task-board implementation page.",
+      "a": {
+        "eyebrow": "Customer launches without loose ends",
+        "headline": "Make every onboarding feel guided from kickoff to launch.",
+        "summary": "OnboardPath gives customer teams a calmer way to coordinate implementation work.",
+        "primary": "Plan customer launch",
+        "secondary": "Read success story",
+        "proof": "Best when the page needs to reassure buyers and customer success leaders.",
+        "steps": ["Kickoff", "Plan", "Coordinate", "Launch"],
+        "details": ["Customer journey", "Team alignment", "Launch confidence"],
+        "command": "onboardpath story"
+      },
+      "b": {
+        "eyebrow": "Implementation tasks with owners and blockers",
+        "headline": "Track setup work, blockers, and launch readiness in one customer plan.",
+        "summary": "OnboardPath turns onboarding into a visible task workflow for customers and internal teams.",
+        "primary": "Open checklist",
+        "secondary": "Create customer plan",
+        "proof": "Best when the page should show exactly how a team operates the product.",
+        "steps": ["Create plan", "Assign owners", "Track blockers", "Confirm launch"],
+        "details": ["Task ownership", "Blocker escalation", "Readiness summary"],
+        "command": "onboardpath create acme"
+      }
+    },
+    {
+      "id": "item-011",
+      "title": "Local automation tool page",
+      "split": "test",
+      "product": "DeskPilot",
+      "prompt": "Create a landing page for DeskPilot. Compare a local-first privacy page against a recipe-driven automation page.",
+      "a": {
+        "eyebrow": "Automation that stays on your machine",
+        "headline": "Run desktop routines without handing work to the cloud.",
+        "summary": "DeskPilot keeps file, form, and export automations local and inspectable.",
+        "primary": "Learn local model",
+        "secondary": "Read privacy notes",
+        "proof": "Best when trust, privacy, and control are the primary concern.",
+        "steps": ["Record locally", "Inspect steps", "Run offline", "Review log"],
+        "details": ["Local execution", "Privacy promise", "Audit log"],
+        "command": "deskpilot privacy"
+      },
+      "b": {
+        "eyebrow": "Repeat office routines from recipes",
+        "headline": "Turn weekly exports, forms, and file cleanup into one-click routines.",
+        "summary": "DeskPilot gives operators recipe templates they can adapt without writing scripts.",
+        "primary": "Browse recipes",
+        "secondary": "Run automation",
+        "proof": "Best when the page should make the product feel immediately useful to non-developers.",
+        "steps": ["Pick recipe", "Adjust fields", "Run routine", "Save log"],
+        "details": ["Recipe library", "Editable steps", "Run history"],
+        "command": "deskpilot run weekly-export"
+      }
+    },
+    {
+      "id": "item-012",
+      "title": "Developer onboarding docs page",
+      "split": "test",
+      "product": "StartHere",
+      "prompt": "Create a landing page for StartHere. Compare a welcoming onboarding page against a first-PR execution page.",
+      "a": {
+        "eyebrow": "A better first day in the repo",
+        "headline": "Help new engineers understand where they are.",
+        "summary": "StartHere creates a welcoming map of setup, architecture, and team conventions.",
+        "primary": "Generate onboarding",
+        "secondary": "See repo map",
+        "proof": "Best when the page should reduce anxiety and orient new contributors.",
+        "steps": ["Setup", "Architecture", "Conventions", "People"],
+        "details": ["Repo map", "Team norms", "Learning path"],
+        "command": "starthere map --repo ."
+      },
+      "b": {
+        "eyebrow": "From clone to first merged PR",
+        "headline": "Give every new engineer a verified path to contribution.",
+        "summary": "StartHere turns setup checks, code map, and starter issues into a first-PR workflow.",
+        "primary": "Open starter PR",
+        "secondary": "Run setup checks",
+        "proof": "Best when onboarding success means shipping a safe first change.",
+        "steps": ["Clone repo", "Run checks", "Pick starter", "Open PR"],
+        "details": ["Setup command path", "Starter issue routing", "PR checklist"],
+        "command": "starthere first-pr --repo ."
+      }
+    }
+  ]
+}
