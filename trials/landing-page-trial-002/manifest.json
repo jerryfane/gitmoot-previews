@@ -1,0 +1,247 @@
+{
+  "run_id": "landing-page-trial-002",
+  "template_id": "landing-page-builder",
+  "preview_base_url": "https://jerryfane.github.io/gitmoot-previews/runs/landing-page-trial-002/",
+  "items": [
+    {
+      "id": "item-001",
+      "title": "Developer CLI launch page",
+      "split": "train",
+      "prompt": "trials/landing-page-trial-002/prompts/item-001.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-001/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-001-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-001/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-001-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-002",
+      "title": "Open source docs homepage",
+      "split": "train",
+      "prompt": "trials/landing-page-trial-002/prompts/item-002.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-002/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-002-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-002/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-002-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-003",
+      "title": "AI notebook workspace",
+      "split": "train",
+      "prompt": "trials/landing-page-trial-002/prompts/item-003.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-003/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-003-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-003/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-003-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-004",
+      "title": "Plugin marketplace page",
+      "split": "train",
+      "prompt": "trials/landing-page-trial-002/prompts/item-004.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-004/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-004-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-004/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-004-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-005",
+      "title": "SaaS analytics product page",
+      "split": "train",
+      "prompt": "trials/landing-page-trial-002/prompts/item-005.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-005/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-005-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-005/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-005-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-006",
+      "title": "API observability launch page",
+      "split": "train",
+      "prompt": "trials/landing-page-trial-002/prompts/item-006.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-006/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-006-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-006/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-006-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-007",
+      "title": "Team knowledge base page",
+      "split": "train",
+      "prompt": "trials/landing-page-trial-002/prompts/item-007.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-007/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-007-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-007/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-007-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-008",
+      "title": "Design review tool page",
+      "split": "train",
+      "prompt": "trials/landing-page-trial-002/prompts/item-008.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-008/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-008-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-008/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-008-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-009",
+      "title": "Security changelog page",
+      "split": "val",
+      "prompt": "trials/landing-page-trial-002/prompts/item-009.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-009/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-009-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-009/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-009-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-010",
+      "title": "Customer onboarding page",
+      "split": "val",
+      "prompt": "trials/landing-page-trial-002/prompts/item-010.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-010/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-010-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-010/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-010-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-011",
+      "title": "Local automation tool page",
+      "split": "test",
+      "prompt": "trials/landing-page-trial-002/prompts/item-011.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-011/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-011-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-011/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-011-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-012",
+      "title": "Developer onboarding docs page",
+      "split": "test",
+      "prompt": "trials/landing-page-trial-002/prompts/item-012.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "variant": "baseline",
+          "preview_path": "runs/landing-page-trial-002/item-012/a/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-012-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "variant": "candidate",
+          "preview_path": "runs/landing-page-trial-002/item-012/b/",
+          "artifact": "trials/landing-page-trial-002/artifacts/item-012-b.md"
+        }
+      }
+    }
+  ]
+}
