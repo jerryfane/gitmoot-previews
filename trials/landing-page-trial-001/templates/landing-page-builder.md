@@ -26,7 +26,7 @@ outputs:
   - static_preview
 evaluation:
   driver: vue-landing-page
-  preferred_gate: pairwise
+  preferred_gate: soft
 ---
 
 # Landing Page Builder
