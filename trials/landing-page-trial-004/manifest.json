@@ -1,0 +1,70 @@
+{
+  "run_id": "landing-page-trial-004",
+  "template_id": "landing-page-builder",
+  "purpose": "Human review of pending candidate landing-page-builder@v5 before promotion.",
+  "preview_base_url": "https://jerryfane.github.io/gitmoot-previews/runs/landing-page-trial-004/",
+  "options": {
+    "a": {
+      "label": "Option A",
+      "source": "landing-page-builder@v1",
+      "notes": "Original template behavior from baseline test evaluation."
+    },
+    "b": {
+      "label": "Option B",
+      "source": "landing-page-builder@v5",
+      "notes": "Pending candidate behavior from best-skill test evaluation."
+    }
+  },
+  "items": [
+    {
+      "id": "item-011",
+      "title": "Local automation tool page",
+      "split": "promotion-review",
+      "prompt": "trials/landing-page-trial-004/prompts/item-011.md",
+      "expected_preference_from_trial_003": "b",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "source": "landing-page-builder@v1",
+          "preview_path": "runs/landing-page-trial-004/item-011/a/",
+          "artifact": "trials/landing-page-trial-004/artifacts/item-011-a.md",
+          "hard": 0,
+          "soft": 0
+        },
+        "b": {
+          "label": "Option B",
+          "source": "landing-page-builder@v5",
+          "preview_path": "runs/landing-page-trial-004/item-011/b/",
+          "artifact": "trials/landing-page-trial-004/artifacts/item-011-b.md",
+          "hard": 1,
+          "soft": 0.88
+        }
+      }
+    },
+    {
+      "id": "item-012",
+      "title": "Developer onboarding docs page",
+      "split": "promotion-review",
+      "prompt": "trials/landing-page-trial-004/prompts/item-012.md",
+      "expected_preference_from_trial_003": "a",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "source": "landing-page-builder@v1",
+          "preview_path": "runs/landing-page-trial-004/item-012/a/",
+          "artifact": "trials/landing-page-trial-004/artifacts/item-012-a.md",
+          "hard": 0,
+          "soft": 0.25
+        },
+        "b": {
+          "label": "Option B",
+          "source": "landing-page-builder@v5",
+          "preview_path": "runs/landing-page-trial-004/item-012/b/",
+          "artifact": "trials/landing-page-trial-004/artifacts/item-012-b.md",
+          "hard": 1,
+          "soft": 0.9
+        }
+      }
+    }
+  ]
+}
