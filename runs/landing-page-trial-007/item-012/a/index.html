@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StartHere refined preview</title>
+  <style>
+    :root { color: #101010; background: #fff; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 320px; background: #fff; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { position: fixed; inset: 0 0 auto; z-index: 5; height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(18px, 4vw, 56px); mix-blend-mode: difference; color: #fff; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 850; }
+    .mark { width: 34px; height: 34px; border: 1.5px solid currentColor; border-radius: 999px; display: grid; place-items: center; font-size: 11px; }
+    .nav { font-size: 13px; font-weight: 800; }
+    .hero { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.72fr); gap: clamp(34px, 7vw, 112px); align-items: center; padding: 96px clamp(18px, 4vw, 56px) 54px; border-bottom: 1px solid #e1e1e1; }
+    .copy { max-width: 760px; }
+    .eyebrow { margin: 0 0 18px; font-size: 12px; line-height: 1.2; text-transform: uppercase; font-weight: 900; letter-spacing: 0; }
+    h1 { margin: 0; font-size: clamp(52px, 8vw, 118px); line-height: .88; letter-spacing: 0; max-width: 850px; }
+    .summary { margin: 28px 0 0; max-width: 610px; font-size: clamp(18px, 2vw, 24px); line-height: 1.45; color: #313131; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .action { min-height: 46px; display: inline-flex; align-items: center; border: 1.5px solid #111; padding: 0 18px; border-radius: 999px; font-size: 14px; font-weight: 850; transition: transform .18s ease, background .18s ease, color .18s ease; }
+    .action.primary { background: #111; color: #fff; }
+    .action:hover { transform: translateY(-2px); }
+    .visual { min-height: 510px; display: grid; align-content: center; border-left: 1.5px solid #111; padding-left: clamp(24px, 4vw, 58px); }
+    .diagram { position: relative; min-height: 410px; display: grid; align-content: center; gap: 14px; }
+    .diagram::before { content: ""; position: absolute; inset: 0 auto 0 24px; width: 1.5px; background: #111; transform: scaleY(.96); transform-origin: top; animation: drawLine 1s ease both; }
+    .diagram h2 { margin: 0 0 10px 58px; font-size: clamp(26px, 3vw, 42px); line-height: 1; }
+    .row { position: relative; margin-left: 58px; display: grid; grid-template-columns: 52px 1fr auto; gap: 14px; align-items: center; min-height: 58px; border-bottom: 1px solid #d9d9d9; animation: lift .6s ease both; }
+    .row:nth-child(2) { animation-delay: .08s; }
+    .row:nth-child(3) { animation-delay: .16s; }
+    .row:nth-child(4) { animation-delay: .24s; }
+    .row:nth-child(5) { animation-delay: .32s; }
+    .row::before { content: ""; position: absolute; left: -40px; top: 22px; width: 15px; height: 15px; border: 1.5px solid #111; border-radius: 50%; background: #fff; }
+    .row b { font-size: 12px; }
+    .row span { font-size: 15px; font-weight: 760; }
+    .row i { font-style: normal; font-size: 12px; border: 1px solid #111; border-radius: 999px; padding: 5px 8px; }
+    .command { margin: 30px 0 0 58px; font-family: "SFMono-Regular", Consolas, monospace; font-size: clamp(13px, 1.5vw, 16px); line-height: 1.6; border-top: 1.5px solid #111; border-bottom: 1.5px solid #111; padding: 18px 0; white-space: normal; }
+    .band { padding: clamp(70px, 10vw, 140px) clamp(18px, 4vw, 56px); border-bottom: 1px solid #e1e1e1; }
+    .band-inner { width: min(1180px, 100%); margin: 0 auto; display: grid; grid-template-columns: minmax(0, .85fr) minmax(300px, .9fr); gap: clamp(32px, 6vw, 98px); align-items: start; }
+    .section-title { margin: 0; font-size: clamp(36px, 5.2vw, 78px); line-height: .98; letter-spacing: 0; }
+    .section-copy { margin: 18px 0 0; max-width: 560px; color: #333; font-size: clamp(17px, 2vw, 22px); line-height: 1.48; }
+    .steps { display: grid; gap: 0; border-top: 1.5px solid #111; }
+    .step { display: grid; grid-template-columns: 54px 1fr; gap: 20px; align-items: center; min-height: 72px; border-bottom: 1px solid #d7d7d7; }
+    .step b { font-size: 12px; }
+    .step span { font-size: clamp(18px, 2vw, 24px); font-weight: 820; }
+    .proof { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: #111; border: 1px solid #111; }
+    .proof span { background: #fff; min-height: 160px; padding: 18px; display: flex; align-items: end; font-size: clamp(17px, 2vw, 24px); line-height: 1.08; font-weight: 850; }
+    .closing { min-height: 58svh; display: grid; align-items: center; padding: clamp(70px, 10vw, 130px) clamp(18px, 4vw, 56px); }
+    .closing p { width: min(900px, 100%); margin: 0; font-size: clamp(38px, 6vw, 86px); line-height: .98; font-weight: 870; letter-spacing: 0; }
+    @keyframes lift { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes drawLine { from { transform: scaleY(0); } to { transform: scaleY(.96); } }
+    @media (max-width: 880px) {
+      .topbar { position: absolute; mix-blend-mode: normal; color: #111; }
+      .hero, .band-inner { grid-template-columns: 1fr; }
+      .hero { padding-top: 108px; min-height: auto; }
+      .visual { min-height: auto; border-left: 0; padding-left: 0; padding-top: 24px; }
+      .diagram { min-height: 350px; }
+      .proof { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      h1 { font-size: clamp(44px, 16vw, 68px); }
+      .row { grid-template-columns: 42px 1fr; }
+      .row i { grid-column: 2; width: max-content; margin-bottom: 10px; }
+      .proof { grid-template-columns: 1fr; }
+      .proof span { min-height: 112px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="Primary"><a class="brand" href="#top"><span class="mark">st</span><span>StartHere</span></a><a class="nav" href="#start">Start</a></nav>
+  <main id="top">
+    <section class="hero">
+      <div class="copy">
+        <p class="eyebrow">A better first day in the repo</p>
+        <h1>Make the repo feel legible before the first PR.</h1>
+        <p class="summary">StartHere gives new engineers a calm map of setup, architecture, conventions, and the first useful contribution path.</p>
+        <div class="actions"><a class="action primary" href="#start">Generate repo map</a><a class="action" href="#proof">Preview first task</a></div>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="diagram">
+          <h2>Onboarding path</h2>
+          <div class="row"><b>Day 1</b><span>Setup passes</span><i>clear</i></div>
+<div class="row"><b>Map</b><span>Services and owners</span><i>visible</i></div>
+<div class="row"><b>Norms</b><span>Team conventions</span><i>noted</i></div>
+<div class="row"><b>First PR</b><span>Safe starter issue</span><i>ready</i></div>
+          <div class="command">$ starthere map --repo . --first-pr</div>
+        </div>
+      </div>
+    </section>
+    <section class="band" id="start">
+      <div class="band-inner">
+        <div><h2 class="section-title">Welcoming docs with enough execution detail to keep momentum.</h2><p class="section-copy">The first screen orients the person. The next section shows exactly how to move from clone to a safe contribution.</p></div>
+        <div class="steps"><div class="step"><b>01</b><span>Understand the repo shape</span></div>
+<div class="step"><b>02</b><span>Run the setup checks</span></div>
+<div class="step"><b>03</b><span>Read team conventions</span></div>
+<div class="step"><b>04</b><span>Pick a starter PR</span></div></div>
+      </div>
+    </section>
+    <section class="band" id="proof"><div class="proof"><span>Architecture map</span>
+<span>Setup command path</span>
+<span>People and ownership</span>
+<span>Starter issue routing</span></div></section>
+    <section class="closing"><p>Help new contributors feel oriented, then give them a precise next action.</p></section>
+  </main>
+</body>
+</html>

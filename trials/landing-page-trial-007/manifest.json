@@ -1,0 +1,49 @@
+{
+  "run_id": "landing-page-trial-007",
+  "template_id": "landing-page-builder",
+  "candidate": "landing-page-builder@v6",
+  "purpose": "Visual promotion review for pending v6 after second SkillOpt loop.",
+  "preview_base_url": "https://jerryfane.github.io/gitmoot-previews/runs/landing-page-trial-007/",
+  "items": [
+    {
+      "id": "item-011",
+      "title": "DeskPilot local automation page",
+      "split": "promotion-review",
+      "prompt": "trials/landing-page-trial-007/prompts/item-011.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "source": "current v5 preview",
+          "preview_path": "runs/landing-page-trial-007/item-011/a/",
+          "artifact": "trials/landing-page-trial-007/artifacts/item-011-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "source": "pending v6-style preview",
+          "preview_path": "runs/landing-page-trial-007/item-011/b/",
+          "artifact": "trials/landing-page-trial-007/artifacts/item-011-b.md"
+        }
+      }
+    },
+    {
+      "id": "item-012",
+      "title": "StartHere onboarding docs page",
+      "split": "promotion-review",
+      "prompt": "trials/landing-page-trial-007/prompts/item-012.md",
+      "options": {
+        "a": {
+          "label": "Option A",
+          "source": "current v5 preview",
+          "preview_path": "runs/landing-page-trial-007/item-012/a/",
+          "artifact": "trials/landing-page-trial-007/artifacts/item-012-a.md"
+        },
+        "b": {
+          "label": "Option B",
+          "source": "pending v6-style preview",
+          "preview_path": "runs/landing-page-trial-007/item-012/b/",
+          "artifact": "trials/landing-page-trial-007/artifacts/item-012-b.md"
+        }
+      }
+    }
+  ]
+}
