@@ -59,3 +59,7 @@ A strong output explains the product fast, feels tailored to the product categor
 ## Exploration Quality Bar
 
 For broad exploration, each option must be a complete landing-page direction, not a partial hero mockup. Include a full header and footer, product-specific brand signal, a clear primary CTA, interactive or clickable-looking elements, subtle useful motion, and enough product content for a newcomer to understand the offer. Avoid broken hero visuals, placeholder proof, generic SaaS filler, and options that differ only by color.
+
+## Visual Asset And Content Depth Bar
+
+When feedback says the best option is still too simple, continue exploration. Generate options with richer product-specific image planes, screenshot-like surfaces, illustrated workflow scenes, or editorial imagery. Add enough supporting content after the hero for a human to judge the landing page direction. Do not treat a stable winner as sufficient when the feedback says quality is still below the bar.
