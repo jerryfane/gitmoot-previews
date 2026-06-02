@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PulseNest - Option A</title>
+<style>
+:root { color: #111111; background: #ffffff; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #ffffff; }
+main { width: min(1120px, calc(100vw - 40px)); margin: 0 auto; padding: 28px 0 56px; }
+nav { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #d9d9d4; padding-bottom: 18px; font-size: 14px; }
+.logo { font-weight: 800; letter-spacing: 0; }
+.navlinks { display: flex; gap: 18px; color: #5a5a5a; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(300px, .98fr); gap: 48px; align-items: center; min-height: 620px; }
+.eyebrow { color: #111111; font-weight: 750; margin: 0 0 14px; }
+h1 { font-size: clamp(44px, 7vw, 84px); line-height: .95; letter-spacing: 0; margin: 0 0 22px; max-width: 760px; }
+.copy { color: #5a5a5a; font-size: 20px; line-height: 1.55; max-width: 620px; margin: 0 0 28px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+button, .secondary { height: 44px; padding: 0 18px; border-radius: 6px; border: 1px solid #111111; font-weight: 750; font-size: 15px; }
+button { color: #ffffff; background: #111111; }
+.secondary { color: #111111; background: transparent; display: inline-grid; place-items: center; text-decoration: none; }
+.visual { min-height: 380px; border: 1px solid #d9d9d4; background: #f5f5f2; border-radius: 8px; padding: 24px; display: grid; place-items: center; box-shadow: 0 20px 60px rgba(20,20,20,.08); }
+.terminal, .dashboard, .diagram, .story { width: 100%; min-height: 300px; border: 1px solid #d9d9d4; background: #ffffff; border-radius: 8px; padding: 22px; }
+.dotbar { display:flex; gap:7px; margin-bottom:24px; } .dotbar span { width:10px; height:10px; border-radius:50%; background:#111111; opacity:.8; }
+pre { white-space: pre-wrap; font-size: 18px; line-height: 1.7; margin: 0; }
+.diagram { display:grid; grid-template-columns: 1fr 1.5fr 1fr; gap:16px; align-items:center; text-align:center; font-weight:800; }
+.diagram svg { width:100%; color:#111111; }
+.dashboard { display:grid; gap:12px; align-content:center; } .row { display:flex; justify-content:space-between; border:1px solid #d9d9d4; padding:16px; border-radius:6px; background:#f5f5f2; } .strong { background:#111111; color:#ffffff; }
+.story { display:grid; place-items:center; text-align:center; font-size:26px; line-height:1.2; position:relative; overflow:hidden; } .sun { width:120px; height:120px; border-radius:50%; border:3px solid #111111; position:absolute; top:34px; right:38px; }
+.below { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; border-top:1px solid #d9d9d4; padding-top:28px; }
+.card { border:1px solid #d9d9d4; border-radius:8px; padding:18px; background:#f5f5f2; }
+.card b { display:block; margin-bottom:8px; } .card span { color:#5a5a5a; line-height:1.45; }
+@media (max-width: 820px) { main { width:min(100% - 28px, 680px); } .hero { grid-template-columns:1fr; min-height:auto; padding:44px 0; gap:28px; } .visual { min-height:300px; } .below { grid-template-columns:1fr; } .navlinks { display:none; } }
+</style>
+</head>
+<body>
+<main>
+<nav><div class="logo">PulseNest</div><div class="navlinks"><span>Product</span><span>Proof</span><span>Pricing</span></div></nav>
+<section class="hero">
+<div>
+<p class="eyebrow">Option A - Routine-first</p>
+<h1>See what PulseNest changes before you install it.</h1>
+<p class="copy">Calm page focused on the daily habit, clear weekly plan, and low-friction start. Built for people who want simple progress without gym complexity. A mobile fitness app that turns short daily workouts into adaptive weekly plans for busy adults.</p>
+<div class="actions"><button>Start today</button><a class="secondary" href="#details">See how it works</a></div>
+</div>
+<div class="visual"><section class="terminal"><div class="dotbar"><span></span><span></span><span></span></div><pre>$ pulsenest start
+loaded product context
+identified primary user job
+created focused landing page
+ready for review</pre></section></div>
+</section>
+<section id="details" class="below">
+<div class="card"><b>First screen</b><span>Terminal transcript, crisp proof points, no decoration beyond layout.</span></div>
+<div class="card"><b>Message</b><span>Prioritizes trust, proof, and concrete output over brand flourish.</span></div>
+<div class="card"><b>Risk</b><span>May feel plain if the product needs stronger visual identity.</span></div>
+</section>
+</main>
+</body>
+</html>

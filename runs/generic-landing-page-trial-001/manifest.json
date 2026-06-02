@@ -1,0 +1,53 @@
+{
+  "run_id": "generic-landing-page-trial-001",
+  "template": "generic-landing-page-designer",
+  "mode": "explore",
+  "exploration_level": "high",
+  "options": 4,
+  "items": [
+    {
+      "item_id": "item-001",
+      "product": "Northstar CLI",
+      "brief": "An open-source command-line tool that coordinates local AI coding agents across repos and pull requests.",
+      "options": {
+        "a": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-001/a/",
+        "b": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-001/b/",
+        "c": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-001/c/",
+        "d": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-001/d/"
+      }
+    },
+    {
+      "item_id": "item-002",
+      "product": "PulseNest",
+      "brief": "A mobile fitness app that turns short daily workouts into adaptive weekly plans for busy adults.",
+      "options": {
+        "a": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-002/a/",
+        "b": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-002/b/",
+        "c": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-002/c/",
+        "d": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-002/d/"
+      }
+    },
+    {
+      "item_id": "item-003",
+      "product": "SignalDesk",
+      "brief": "A B2B analytics dashboard that warns revenue teams about churn and expansion opportunities before the quarter slips.",
+      "options": {
+        "a": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-003/a/",
+        "b": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-003/b/",
+        "c": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-003/c/",
+        "d": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-003/d/"
+      }
+    },
+    {
+      "item_id": "item-004",
+      "product": "TableSpark",
+      "brief": "A restaurant booking app that helps independent restaurants fill quiet tables with smart last-minute offers.",
+      "options": {
+        "a": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-004/a/",
+        "b": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-004/b/",
+        "c": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-004/c/",
+        "d": "https://jerryfane.github.io/gitmoot-previews/runs/generic-landing-page-trial-001/item-004/d/"
+      }
+    }
+  ]
+}
