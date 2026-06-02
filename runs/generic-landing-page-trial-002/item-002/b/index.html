@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PulseNest - Interactive Product Surface</title>
+<style>
+:root { color:#11131a; background:#f7f8fb; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; min-height:100vh; background:#f7f8fb; }
+a { color:inherit; text-decoration:none; }
+button { font:inherit; cursor:pointer; }
+.topbar { position:sticky; top:0; z-index:5; height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:0 clamp(18px,4vw,54px); border-bottom:1px solid color-mix(in srgb, #11131a 16%, transparent); background:color-mix(in srgb, #f7f8fb 92%, transparent); backdrop-filter:blur(16px); }
+.brand { display:flex; align-items:center; gap:10px; font-weight:850; }
+.mark { width:34px; height:34px; border:2px solid #11131a; display:grid; place-items:center; border-radius:50%; color:#f7f8fb; background:#11131a; }
+nav { display:flex; gap:22px; color:#4d5568; font-size:14px; }
+.mini, .cta { border:1px solid #11131a; background:#11131a; color:#f7f8fb; border-radius:999px; min-height:40px; padding:0 17px; font-weight:800; }
+.ghost { border:1px solid color-mix(in srgb, #11131a 22%, transparent); background:transparent; color:#11131a; border-radius:999px; min-height:44px; padding:0 17px; font-weight:750; }
+.hero { min-height:calc(100svh - 72px); display:grid; grid-template-columns:minmax(0, .9fr) minmax(360px, 1.1fr); align-items:center; gap:clamp(28px,6vw,72px); padding:clamp(28px,5vw,64px) clamp(18px,4vw,54px); overflow:hidden; }
+.copyCol { max-width:690px; animation:rise .7s ease both; }
+.kicker { color:#4267d9; font-weight:850; margin:0 0 14px; }
+h1 { margin:0; font-size:clamp(46px,8vw,104px); line-height:.88; letter-spacing:0; }
+.lede { color:#4d5568; font-size:clamp(18px,2vw,22px); line-height:1.55; margin:24px 0 28px; max-width:640px; }
+.actions { display:flex; gap:12px; flex-wrap:wrap; }
+.visual { min-height:520px; display:grid; place-items:center; position:relative; animation:floatIn .8s ease .12s both; }
+.posterVisual, .surfaceVisual, .flowVisual, .storyVisual { width:min(100%, 680px); min-height:430px; border:1px solid color-mix(in srgb, #11131a 18%, transparent); background:#e4e9ff; border-radius:18px; padding:28px; position:relative; overflow:hidden; box-shadow:0 28px 80px rgba(18,18,18,.12); }
+.posterVisual { display:grid; place-items:center; } .signalMark { position:absolute; top:22px; left:22px; width:76px; height:76px; border-radius:50%; background:#11131a; color:#f7f8fb; display:grid; place-items:center; font-size:44px; font-weight:900; }
+.posterVisual svg { width:88%; color:#4267d9; } .draw, .route { fill:none; stroke:currentColor; stroke-width:8; stroke-linecap:round; stroke-dasharray:700; animation:draw 2.2s ease both infinite alternate; }
+.posterVisual circle { fill:#4267d9; animation:pulse 1.8s ease infinite; } .chips { position:absolute; left:28px; right:28px; bottom:26px; display:flex; flex-wrap:wrap; gap:10px; } .chips button { border:1px solid #11131a; background:#f7f8fb; border-radius:999px; padding:9px 13px; }
+.toolbar { display:flex; gap:10px; margin-bottom:18px; } .toolbar button, .workRows button, .metric { border:1px solid color-mix(in srgb, #11131a 18%, transparent); background:#f7f8fb; border-radius:10px; padding:12px; transition:transform .18s ease, background .18s ease; } .toolbar button:hover, .workRows button:hover, .metric:hover { transform:translateY(-3px); background:color-mix(in srgb, #4267d9 12%, #f7f8fb); }
+.screen { background:#f7f8fb; border:1px solid color-mix(in srgb, #11131a 16%, transparent); border-radius:14px; padding:18px; } .screenHead { display:flex; justify-content:space-between; gap:16px; align-items:center; margin-bottom:16px; } #status-pill { background:#4267d9; color:#f7f8fb; border-radius:999px; padding:7px 10px; font-weight:800; }
+.metricGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:12px; } .metric { text-align:left; } .metric b { display:block; font-size:24px; } .metric span, .workRows span { color:#4d5568; } .workRows { display:grid; gap:10px; } .workRows button { display:flex; justify-content:space-between; align-items:center; } .workRows i { width:20px; height:20px; border-radius:50%; background:#4267d9; }
+.flowVisual { display:grid; align-content:center; } .flowVisual svg { width:100%; color:#4267d9; } .flowVisual circle { fill:#f7f8fb; stroke:#11131a; stroke-width:4; } .flowVisual text { text-anchor:middle; font-weight:900; fill:#11131a; } .stepButtons { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; } .stepButtons button { border:1px solid #11131a; background:#f7f8fb; border-radius:999px; padding:10px 14px; transition:transform .18s ease; } .stepButtons button:hover { transform:scale(1.04); }
+.storyVisual { display:grid; place-items:center; text-align:center; } .orb { position:absolute; border-radius:50%; border:2px solid #4267d9; animation:drift 4s ease-in-out infinite alternate; } .one { width:180px; height:180px; top:44px; left:40px; } .two { width:92px; height:92px; right:54px; bottom:58px; animation-delay:.4s; } .sceneLine { position:absolute; width:74%; height:2px; background:#11131a; transform:rotate(-8deg); opacity:.55; } .storyText { position:relative; z-index:1; max-width:360px; } .storyText b { display:block; font-size:clamp(34px,5vw,58px); line-height:.95; margin-bottom:16px; } .storyText span { color:#4d5568; font-size:18px; } .objectButton { position:absolute; bottom:26px; left:50%; transform:translateX(-50%); border:1px solid #11131a; background:#f7f8fb; border-radius:999px; padding:11px 16px; }
+.proof { display:grid; grid-template-columns:.9fr 1.1fr; gap:32px; padding:64px clamp(18px,4vw,54px); border-top:1px solid color-mix(in srgb, #11131a 14%, transparent); } .label { color:#4267d9; font-weight:850; margin:0 0 10px; } h2 { margin:0; font-size:clamp(32px,5vw,62px); line-height:1; letter-spacing:0; } .proof ul { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; } .proof li { border-top:2px solid #11131a; padding-top:12px; } .proof li b { display:block; font-size:30px; } .proof li span { color:#4d5568; }
+.details { padding:64px clamp(18px,4vw,54px); max-width:940px; } .details p:last-child { color:#4d5568; font-size:20px; line-height:1.55; }
+footer { display:flex; justify-content:space-between; gap:18px; align-items:center; padding:28px clamp(18px,4vw,54px); border-top:1px solid color-mix(in srgb, #11131a 14%, transparent); color:#4d5568; } footer b { color:#11131a; } footer a { color:#11131a; font-weight:800; }
+@keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+@keyframes floatIn { from { opacity:0; transform:translateY(22px) scale(.98); } to { opacity:1; transform:none; } }
+@keyframes draw { from { stroke-dashoffset:700; } to { stroke-dashoffset:0; } }
+@keyframes pulse { 0%,100% { transform:scale(1); opacity:.75; } 50% { transform:scale(1.3); opacity:1; } }
+@keyframes drift { from { transform:translate3d(0,0,0); } to { transform:translate3d(16px,-14px,0); } }
+@media (max-width:900px) { nav { display:none; } .hero { grid-template-columns:1fr; min-height:auto; } .visual { min-height:360px; } .posterVisual,.surfaceVisual,.flowVisual,.storyVisual { min-height:340px; } .proof { grid-template-columns:1fr; } .proof ul { grid-template-columns:1fr; } footer { align-items:flex-start; flex-direction:column; } }
+</style>
+</head>
+<body id="top">
+<header class="topbar"><a class="brand" href="../../"><span class="mark">P</span><span>PulseNest</span></a><nav><a href="#product">Product</a><a href="#proof">Proof</a><a href="#details">Details</a></nav><button class="mini">Start</button></header>
+<main>
+<section class="hero" id="product"><div class="copyCol"><p class="kicker">Option B - Interactive Product Surface</p><h1>Operate PulseNest from the first screen.</h1><p class="lede">A mobile fitness app that turns short daily workouts into adaptive weekly plans for busy adults. The hero behaves like a product surface, with clickable states and concrete signals.</p><div class="actions"><button class="cta">Start today</button><a class="ghost" href="#details">Preview plan</a></div></div><div class="visual"><div class="surfaceVisual"><div class="toolbar"><button data-state="Ready">Ready</button><button data-state="Reviewing">Review</button><button data-state="Live">Launch</button></div><div class="screen"><div class="screenHead"><span id="status-pill">Ready</span><b>Adaptive fitness without gym chaos</b></div><div class="metricGrid"><button class="metric"><b>18 min</b><span>today</span></button><button class="metric"><b>5 days</b><span>streak</span></button><button class="metric"><b>82%</b><span>weekly target</span></button></div><div class="workRows"><button><span>daily plan</span><i></i></button><button><span>streaks</span><i></i></button><button><span>recovery</span><i></i></button><button><span>adaptive blocks</span><i></i></button></div></div></div></div></section>
+<section id="proof" class="proof"><div><p class="label">Proof</p><h2>PulseNest shows the working surface immediately.</h2></div><ul><li><b>18 min</b><span>today</span></li><li><b>5 days</b><span>streak</span></li><li><b>82%</b><span>weekly target</span></li></ul></section><section id="details" class="details"><p class="label">Why this direction</p><h2>Clickable controls make the hero feel usable.</h2><p>Product UI as the hero with clickable controls, status changes, dense evidence, and a utility-first footer. It specifically references daily plan, streaks, recovery instead of relying on generic startup language.</p></section>
+</main>
+<footer><b>PulseNest</b><span>Product-specific landing-page exploration for Gitmoot SkillOpt.</span><a href="#top">Back to top</a></footer>
+<script>
+for (const button of document.querySelectorAll('[data-state]')) { button.addEventListener('click', () => { const pill = document.getElementById('status-pill'); if (pill) pill.textContent = button.dataset.state; }); }
+for (const button of document.querySelectorAll('.objectButton,.metric,.stepButtons button,.chips button')) { button.addEventListener('click', () => button.classList.toggle('selected')); }
+</script>
+</body>
+</html>

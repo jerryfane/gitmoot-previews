@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Northstar CLI - Brand Poster</title>
+<style>
+:root { color:#101010; background:#fffdf7; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; min-height:100vh; background:#fffdf7; }
+a { color:inherit; text-decoration:none; }
+button { font:inherit; cursor:pointer; }
+.topbar { position:sticky; top:0; z-index:5; height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:0 clamp(18px,4vw,54px); border-bottom:1px solid color-mix(in srgb, #101010 16%, transparent); background:color-mix(in srgb, #fffdf7 92%, transparent); backdrop-filter:blur(16px); }
+.brand { display:flex; align-items:center; gap:10px; font-weight:850; }
+.mark { width:34px; height:34px; border:2px solid #101010; display:grid; place-items:center; border-radius:50%; color:#fffdf7; background:#101010; }
+nav { display:flex; gap:22px; color:#5a5143; font-size:14px; }
+.mini, .cta { border:1px solid #101010; background:#101010; color:#fffdf7; border-radius:999px; min-height:40px; padding:0 17px; font-weight:800; }
+.ghost { border:1px solid color-mix(in srgb, #101010 22%, transparent); background:transparent; color:#101010; border-radius:999px; min-height:44px; padding:0 17px; font-weight:750; }
+.hero { min-height:calc(100svh - 72px); display:grid; grid-template-columns:minmax(0, .9fr) minmax(360px, 1.1fr); align-items:center; gap:clamp(28px,6vw,72px); padding:clamp(28px,5vw,64px) clamp(18px,4vw,54px); overflow:hidden; }
+.copyCol { max-width:690px; animation:rise .7s ease both; }
+.kicker { color:#d4562f; font-weight:850; margin:0 0 14px; }
+h1 { margin:0; font-size:clamp(46px,8vw,104px); line-height:.88; letter-spacing:0; }
+.lede { color:#5a5143; font-size:clamp(18px,2vw,22px); line-height:1.55; margin:24px 0 28px; max-width:640px; }
+.actions { display:flex; gap:12px; flex-wrap:wrap; }
+.visual { min-height:520px; display:grid; place-items:center; position:relative; animation:floatIn .8s ease .12s both; }
+.posterVisual, .surfaceVisual, .flowVisual, .storyVisual { width:min(100%, 680px); min-height:430px; border:1px solid color-mix(in srgb, #101010 18%, transparent); background:#f2e1cf; border-radius:18px; padding:28px; position:relative; overflow:hidden; box-shadow:0 28px 80px rgba(18,18,18,.12); }
+.posterVisual { display:grid; place-items:center; } .signalMark { position:absolute; top:22px; left:22px; width:76px; height:76px; border-radius:50%; background:#101010; color:#fffdf7; display:grid; place-items:center; font-size:44px; font-weight:900; }
+.posterVisual svg { width:88%; color:#d4562f; } .draw, .route { fill:none; stroke:currentColor; stroke-width:8; stroke-linecap:round; stroke-dasharray:700; animation:draw 2.2s ease both infinite alternate; }
+.posterVisual circle { fill:#d4562f; animation:pulse 1.8s ease infinite; } .chips { position:absolute; left:28px; right:28px; bottom:26px; display:flex; flex-wrap:wrap; gap:10px; } .chips button { border:1px solid #101010; background:#fffdf7; border-radius:999px; padding:9px 13px; }
+.toolbar { display:flex; gap:10px; margin-bottom:18px; } .toolbar button, .workRows button, .metric { border:1px solid color-mix(in srgb, #101010 18%, transparent); background:#fffdf7; border-radius:10px; padding:12px; transition:transform .18s ease, background .18s ease; } .toolbar button:hover, .workRows button:hover, .metric:hover { transform:translateY(-3px); background:color-mix(in srgb, #d4562f 12%, #fffdf7); }
+.screen { background:#fffdf7; border:1px solid color-mix(in srgb, #101010 16%, transparent); border-radius:14px; padding:18px; } .screenHead { display:flex; justify-content:space-between; gap:16px; align-items:center; margin-bottom:16px; } #status-pill { background:#d4562f; color:#fffdf7; border-radius:999px; padding:7px 10px; font-weight:800; }
+.metricGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:12px; } .metric { text-align:left; } .metric b { display:block; font-size:24px; } .metric span, .workRows span { color:#5a5143; } .workRows { display:grid; gap:10px; } .workRows button { display:flex; justify-content:space-between; align-items:center; } .workRows i { width:20px; height:20px; border-radius:50%; background:#d4562f; }
+.flowVisual { display:grid; align-content:center; } .flowVisual svg { width:100%; color:#d4562f; } .flowVisual circle { fill:#fffdf7; stroke:#101010; stroke-width:4; } .flowVisual text { text-anchor:middle; font-weight:900; fill:#101010; } .stepButtons { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; } .stepButtons button { border:1px solid #101010; background:#fffdf7; border-radius:999px; padding:10px 14px; transition:transform .18s ease; } .stepButtons button:hover { transform:scale(1.04); }
+.storyVisual { display:grid; place-items:center; text-align:center; } .orb { position:absolute; border-radius:50%; border:2px solid #d4562f; animation:drift 4s ease-in-out infinite alternate; } .one { width:180px; height:180px; top:44px; left:40px; } .two { width:92px; height:92px; right:54px; bottom:58px; animation-delay:.4s; } .sceneLine { position:absolute; width:74%; height:2px; background:#101010; transform:rotate(-8deg); opacity:.55; } .storyText { position:relative; z-index:1; max-width:360px; } .storyText b { display:block; font-size:clamp(34px,5vw,58px); line-height:.95; margin-bottom:16px; } .storyText span { color:#5a5143; font-size:18px; } .objectButton { position:absolute; bottom:26px; left:50%; transform:translateX(-50%); border:1px solid #101010; background:#fffdf7; border-radius:999px; padding:11px 16px; }
+.proof { display:grid; grid-template-columns:.9fr 1.1fr; gap:32px; padding:64px clamp(18px,4vw,54px); border-top:1px solid color-mix(in srgb, #101010 14%, transparent); } .label { color:#d4562f; font-weight:850; margin:0 0 10px; } h2 { margin:0; font-size:clamp(32px,5vw,62px); line-height:1; letter-spacing:0; } .proof ul { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; } .proof li { border-top:2px solid #101010; padding-top:12px; } .proof li b { display:block; font-size:30px; } .proof li span { color:#5a5143; }
+.details { padding:64px clamp(18px,4vw,54px); max-width:940px; } .details p:last-child { color:#5a5143; font-size:20px; line-height:1.55; }
+footer { display:flex; justify-content:space-between; gap:18px; align-items:center; padding:28px clamp(18px,4vw,54px); border-top:1px solid color-mix(in srgb, #101010 14%, transparent); color:#5a5143; } footer b { color:#101010; } footer a { color:#101010; font-weight:800; }
+@keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+@keyframes floatIn { from { opacity:0; transform:translateY(22px) scale(.98); } to { opacity:1; transform:none; } }
+@keyframes draw { from { stroke-dashoffset:700; } to { stroke-dashoffset:0; } }
+@keyframes pulse { 0%,100% { transform:scale(1); opacity:.75; } 50% { transform:scale(1.3); opacity:1; } }
+@keyframes drift { from { transform:translate3d(0,0,0); } to { transform:translate3d(16px,-14px,0); } }
+@media (max-width:900px) { nav { display:none; } .hero { grid-template-columns:1fr; min-height:auto; } .visual { min-height:360px; } .posterVisual,.surfaceVisual,.flowVisual,.storyVisual { min-height:340px; } .proof { grid-template-columns:1fr; } .proof ul { grid-template-columns:1fr; } footer { align-items:flex-start; flex-direction:column; } }
+</style>
+</head>
+<body id="top">
+<header class="topbar"><a class="brand" href="../../"><span class="mark">N</span><span>Northstar CLI</span></a><nav><a href="#product">Product</a><a href="#proof">Proof</a><a href="#details">Details</a></nav><button class="mini">Start</button></header>
+<main>
+<section class="hero" id="product"><div class="copyCol"><p class="kicker">Option A - Brand Poster</p><h1>Northstar CLI</h1><p class="lede">Local-first agent command center. A sharper brand-led page for senior developers and technical founders evaluating a local-first agent workflow. that still names the real product mechanics.</p><div class="actions"><button class="cta">Install Northstar</button><a class="ghost" href="#details">Read workflow</a></div></div><div class="visual"><div class="posterVisual"><div class="signalMark">N</div><svg viewBox="0 0 420 240" aria-hidden="true"><path class="draw" d="M28 184 C92 80, 142 80, 198 146 S314 226, 388 54"/><circle cx="92" cy="102" r="12"/><circle cx="198" cy="146" r="12"/><circle cx="336" cy="112" r="12"/></svg><div class="chips"><button>repo watcher</button><button>PR routing</button><button>agent locks</button></div></div></div></section>
+<section id="proof" class="proof"><div><p class="label">Proof</p><h2>Northstar CLI feels like a brand before it asks for trust.</h2></div><ul><li><b>4 repos</b><span>watched locally</span></li><li><b>12 jobs</b><span>queued safely</span></li><li><b>0 cloud</b><span>control plane</span></li></ul></section><section id="details" class="details"><p class="label">Why this direction</p><h2>Brand-first, but grounded in product terms.</h2><p>Full-bleed brand-led hero with product-specific mark, animated line motif, clear header/footer, and compact proof. It specifically references repo watcher, PR routing, agent locks instead of relying on generic startup language.</p></section>
+</main>
+<footer><b>Northstar CLI</b><span>Product-specific landing-page exploration for Gitmoot SkillOpt.</span><a href="#top">Back to top</a></footer>
+<script>
+for (const button of document.querySelectorAll('[data-state]')) { button.addEventListener('click', () => { const pill = document.getElementById('status-pill'); if (pill) pill.textContent = button.dataset.state; }); }
+for (const button of document.querySelectorAll('.objectButton,.metric,.stepButtons button,.chips button')) { button.addEventListener('click', () => button.classList.toggle('selected')); }
+</script>
+</body>
+</html>

@@ -55,3 +55,7 @@ Return a concise landing-page direction with:
 ## Review Criteria
 
 A strong output explains the product fast, feels tailored to the product category, has a clear CTA, and gives the reviewer enough visual structure to judge the direction.
+
+## Exploration Quality Bar
+
+For broad exploration, each option must be a complete landing-page direction, not a partial hero mockup. Include a full header and footer, product-specific brand signal, a clear primary CTA, interactive or clickable-looking elements, subtle useful motion, and enough product content for a newcomer to understand the offer. Avoid broken hero visuals, placeholder proof, generic SaaS filler, and options that differ only by color.
