@@ -1,0 +1,73 @@
+{
+  "baseline_selection_hard": 0.0,
+  "baseline_selection_soft": 0.45,
+  "best_selection_hard": 1.0,
+  "best_selection_sample_artifact_path": "/root/.gitmoot/evals/train/landing-page-preview-trial-005/landing-page-preview-trial-005-004/optimizer-human-feedback-restart-a10/steps/step_0001/selection_eval/predictions/item-001/target_exec_artifact.json",
+  "best_selection_soft": 0.86,
+  "best_step": 1,
+  "dry_run": false,
+  "final_eval_enabled": false,
+  "final_eval_ran": false,
+  "final_test_skipped_reason": "final_eval_disabled",
+  "gate_blocker": "",
+  "gate_blockers": [],
+  "gate_reject_retry_attempts": [],
+  "gate_rejection": null,
+  "gate_status": "passed",
+  "next_action": "",
+  "no_candidate_details": {},
+  "no_candidate_diagnostics": {
+    "categories": [],
+    "retry_budget_exhausted": false,
+    "retry_stop_reasons": [],
+    "selection_gate_relation": "unknown"
+  },
+  "no_candidate_reason": "",
+  "no_candidate_triggers": [],
+  "noop_retry_attempts": [],
+  "promotable": true,
+  "token_summary": {
+    "_total": {
+      "calls": 8,
+      "completion_tokens": 3461,
+      "prompt_tokens": 181721,
+      "total_tokens": 185182
+    },
+    "analyst": {
+      "calls": 1,
+      "completion_tokens": 1222,
+      "prompt_tokens": 27032,
+      "total_tokens": 28254
+    },
+    "gitmoot_landing_page_judge": {
+      "calls": 2,
+      "completion_tokens": 2134,
+      "prompt_tokens": 108733,
+      "total_tokens": 110867
+    },
+    "gitmoot_preflight_evaluator": {
+      "calls": 1,
+      "completion_tokens": 80,
+      "prompt_tokens": 22981,
+      "total_tokens": 23061
+    },
+    "gitmoot_preflight_optimizer": {
+      "calls": 1,
+      "completion_tokens": 25,
+      "prompt_tokens": 22975,
+      "total_tokens": 23000
+    },
+    "rollout": {
+      "calls": 3,
+      "completion_tokens": 0,
+      "prompt_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "total_accepts": 1,
+  "total_blocks": 0,
+  "total_rejects": 0,
+  "total_skips": 0,
+  "total_steps": 1,
+  "wrong_artifact_retry_attempts": []
+}
