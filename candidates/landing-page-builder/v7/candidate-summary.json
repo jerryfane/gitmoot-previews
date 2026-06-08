@@ -1,0 +1,12 @@
+{
+  "diff_artifact_id": "landing-page-trial-008-gpt55-soft-candidate-diff",
+  "metadata": {
+    "artifact_ids": [
+      "landing-page-trial-008-gpt55-soft-candidate-diff",
+      "landing-page-trial-008-gpt55-soft-eval-report",
+      "landing-page-trial-008-gpt55-soft-preference-summary"
+    ]
+  },
+  "preference_summary": "# Gitmoot SkillOpt Candidate\n\nMode: optimizer\n\nBest selection hard: 0.8775\nBaseline selection hard: 1.0\nTotal steps: 3",
+  "score": 0.8775
+}

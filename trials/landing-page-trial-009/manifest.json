@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "id": "item-011",
+      "title": "DeskPilot local automation page",
+      "prompt": "trials/landing-page-trial-009/prompts/item-011.md",
+      "options": {
+        "a": "runs/landing-page-trial-009/item-011/a/",
+        "b": "runs/landing-page-trial-009/item-011/b/"
+      }
+    },
+    {
+      "id": "item-012",
+      "title": "Traceboard developer diagnostics page",
+      "prompt": "trials/landing-page-trial-009/prompts/item-012.md",
+      "options": {
+        "a": "runs/landing-page-trial-009/item-012/a/",
+        "b": "runs/landing-page-trial-009/item-012/b/"
+      }
+    }
+  ],
+  "run_id": "landing-page-trial-009",
+  "template": "landing-page-builder",
+  "template_a": "landing-page-builder@v6",
+  "template_b": "landing-page-builder@v7"
+}

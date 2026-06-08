@@ -1,0 +1,1 @@
+Create a landing page for DeskPilot. Continue from v6 feedback: keep the stronger hero and clickable options, but explain what the product does in the first viewport, add concrete use cases, and make the proof section feel real.
